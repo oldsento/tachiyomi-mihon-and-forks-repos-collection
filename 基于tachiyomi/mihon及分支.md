@@ -14,7 +14,7 @@
 12. https://github.com/Saud-97/TachiyomiS97
 13. https://github.com/UnTamed-Fury/Naiko
 
-💡https://apps.apple.com/us/app/tachimanga/id6447486175，tachiyomi的水果端tachimanga(闭源)，貌似有广告和收费，​
+💡https://apps.apple.com/us/app/tachimanga/id6447486175 ，tachiyomi的水果端tachimanga(闭源)，貌似有广告和收费，​
 
 基于aniyomi：
 1. https://github.com/hastie101/kuukiyomi
@@ -28,8 +28,8 @@
 3. https://github.com/RepoDevil/Himitsu
 4. https://github.com/aayush2622/Dartotsu
 
-https://github.com/hayase-app/ui，https://hayase.watch/，hayase(miru)，多平台，动画/BT，https://play.google.com/store/apps/details?id=watch.miru&hl=en-US，安卓版难找github没安卓版❗和https://github.com/ThaUnknown/miru没有关系，只是那软件老名字一样❗
+https://github.com/hayase-app/ui ，https://hayase.watch/ ，hayase(miru)，多平台，动画/BT，https://play.google.com/store/apps/details?id=watch.miru&hl=en-US ，安卓版难找github没安卓版❗和https://github.com/ThaUnknown/miru 没有关系，只是那软件老名字一样❗
 
 基于hayase(miru):
-1. https://github.com/NoCrypt/migu
+1.https://github.com/NoCrypt/migu
 2.https://github.com/RockinChaos/Shiru
