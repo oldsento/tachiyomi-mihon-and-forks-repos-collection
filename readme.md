@@ -36,4 +36,6 @@
 | 34   | [TachiyomiS97](https://github.com/Saud-97/TachiyomiS97) | 基于TachiyomiJ2K          | Android       | ✅                | 在线      | 漫画       |  ✅           |
 | 35   | [Naiko](https://github.com/UnTamed-Fury/Naiko)    | 基于Aniyomi/Mihon/Yokai的UI |      |               |       |        |             |
 | 36   | [CloudStream](https://github.com/recloudstream/cloudstream) | ❌ | Android | 支持aniyomi插件(另外下载插件包 | 在线 | 动画/影视 | ✅ |
+ 37   | [Dartotsu](https://github.com/aayush2622/Dartotsu) | 基于Dantotsu(名字很像 | 多平台 | ❌支持mangayomi插件 | 在线 | 动画/漫画/小说 | ❌ |
+
 
