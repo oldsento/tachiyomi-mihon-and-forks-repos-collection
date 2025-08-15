@@ -41,6 +41,7 @@
 | 37   | [Dartotsu](https://github.com/aayush2622/Dartotsu) | 基于Dantotsu(名字很像 | 多平台 | ❌支持mangayomi插件 | 在线 | 动画/漫画/小说 | ❌ |
 
 ————————————
+
 人肉搜索整理然后用AI生成了markdown……总之可能有不少错误欢迎指正，有其他本帖没提到的也麻烦了///列表中留空的表示不确定/没有仔细了解！
 
 # 注：
@@ -49,13 +50,13 @@
 
 更多/相关：
 
-[url]https://wotaku.wiki/software[/url]
+https://wotaku.wiki/software
 
-[url]https://github.com/topics/manga-reader[/url]
+https://github.com/topics/manga-reader
 
-[url]https://alternativeto.net/software/tachiyomi/[/url]
+https://alternativeto.net/software/tachiyomi/
 
-[url]https://alternativeto.net/software/mihon/[/url]
+https://alternativeto.net/software/mihon/
 
 https://meta.appinn.net/t/topic/73891/13
 至于涉及到的软件插件相关可以参考：
