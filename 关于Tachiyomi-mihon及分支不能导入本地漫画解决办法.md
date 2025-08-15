@@ -68,7 +68,47 @@ x10，tachiyomiJ2K在local文件夹新建文件夹后把目标弄过去就能看
 
 2. 已下漫画有话数列表是多个章节，把目标移动并重命名为后续未下载的章节即可，但后缀名必须保持一致(默认cbz)❗修改后软件可以识别，但章节最右侧的下载标志没有变深色可以忽略，重启后就变了，
 
-总结：按道理来说TachiyomiJ2K应该正常的啊，曾几何时记得在某个旧版有导入过……而这软件现在貌似也被冷落很久没更新了，其他分支问题可能又大同小异具体请自行测试，经过测试发现Yōkai表现优秀👍，只要把文件弄到local文件夹就显示了(不显示在详情页下滑刷新一下，虽然不支持的文件还是和其他同类一样的问题，如果有其他解决办法欢迎分享
+总结：按道理来说TachiyomiJ2K应该正常的啊，曾几何时记得在某个旧版有导入过……而这软件现在貌似也被冷落很久没更新了，其他分支问题可能又大同小异具体请自行测试，经过测试发现Yōkai表现优秀👍，只要把文件弄到local文件夹就显示了(不显示在详情页下滑刷新一下，虽然不支持的文件还是和其他同类一样的问题，
 
 相关：
 https://meta.appinn.net/t/topic/73891
+
+## 安卓端13个全测：
+1. https://github.com/Jays2Kings/tachiyomiJ2K TachiyomiJ2K1.7.4，(正常情况)在软件路径创建local文件夹并移动目标即可，阅读界面有列表快捷，epub部分不支持(改后缀名成zip/cbz可以看的支持)
+
+2. https://github.com/aniyomiorg/aniyomi Aniyomi0.16.4.3，修改存储位置为目标有local文件夹的路径/tachiyomiJ2K/local/即可，阅读界面无列表快捷❗
+
+3. https://github.com/komikku-app/komikku komikku1.13.2，修改存储位置为目标有local文件夹的路径/tachiyomiJ2K/local/即可，阅读界面有列表快捷，
+
+4. https://github.com/null2264/yokai Yōkai1.9.7.3，修改存储位置为目标有local文件夹的路径/tachiyomiJ2K/local/即可，阅读界面有列表快捷，
+
+5. https://github.com/mihonapp/mihon ，版本0.19.1，修改存储位置为目标有local文件夹的路径/tachiyomiJ2K/local/即可，还是不支持epub，可能不是漫画/图片内容不支持，阅读界面无列表快捷❗
+
+6. https://github.com/az4521/tachiyomiAZ/ ，版本v8.8.2-AZ，必须移动文件夹到软件路径tachiyomiAZ/local/，和设置(存储)下载路径没关系❗打开漫画默认是详情还要点击章节，阅读界面无列表快捷❗
+
+7. https://github.com/jobobby04/TachiyomiSY/ ，版本1.12.0，在local目录创建文件夹把目标移动即可，可以把存储位置设置为同类的比如/tachiyomiJ2K/即可查看，阅读界面有列表快捷
+
+8. https://github.com/NerdNumber9/TachiyomiEH ，版本v8.4.5-EH，移动目标到软件目录的local文件夹即可，和设置(存储)下载路径没关系❗阅读界面无列表快捷❗打开漫画默认是详情还要点击章节，
+
+9. https://github.com/AmanoTeam/Kahon ，版本0.19.2，把存储位置设置为同类的比如/tachiyomiJ2K/即可查看，阅读界面无列表快捷❗
+
+10. https://github.com/Saud-97/TachiyomiS97 ，版本1.7.4，绑定了默认路径/TachiyomiS97/local，把文件移动到此路径即可，和设置(存储)下载路径没关系❗
+
+11. https://github.com/aayush2622/Dartotsu 版本0.0.2，看是否支持下载❗不支持本地导入媒体❗r10容易闪退❗不支持tachiyomi/aniyomi仓库❗
+
+12. https://github.com/RyanYuuki/AnymeX ，版本2.9.9，本地文件只支持视频❗
+
+13. https://github.com/RepoDevil/Himitsu ，版本1.0.3-b20028e0，可以修改下载器为第三方，不支持本地导入媒体，
+
+## 总结：
+1. 修改存储位置：aniyomi，komikku，Yōkai，mihon，tachiyomiSY，kahon，
+
+2. 移动文件夹到软件固定路径(没有需要创建local：tachiyomiJ2K，tachiyomiAZ，tachiyomiEH，tachiyomiS97，
+
+关于支持的格式，经过测试，rar，cbz，epub(纯图片/漫画)部分支持，rar5，epub小说不支持，虽然大部分是分支/翻版，但通过软件下载保存cbz格式的可能都有些不通用❗️以及备份数据同理，
+
+～～～～～
+
+🙃话说TachiyomiJ2K1.7.4，荣耀10青春版安卓10(上下文简称r10)，起初怎么改怎么整都识别不了/无法导入❗接着经过反复测试发现在/tachiyomiJ2K/local/再创建一个local文件夹然后把目标文件夹移动到此(tachiyomiJ2K/local/local/，按道理来说这样已经正常了(tachiyomiJ2K/local/，但r10/tachiyomiJ2K就是不显示/bug❗但查看此文件夹会自动生成cover，有2次偶然显示正常，但移动文件夹后又bug了，而且还是依赖这个文件夹，随便创建还不行，(部分压缩包提示不支持rar5和部分cbz格式)，第三次验证成功，路径：tachiyomiJ2K/local/local/目标，但这次没封面❗(封面可以在阅读界面长按设置图片)，改换名几次测试正常，没想到第四次终于正常了，但没显示封面，于是想着改名后怎样，接着改成中文名后就显示封面了，后面又反复测试几次，居然正常了😓，这软件是被窝调教正常了😂？总之这一遭实在是很莫名，应该是特殊情况或软件bug，其实或许可以通过清除数据/重装软件解决？但窝还是不信邪[s]喜欢折腾[/s]就……
+
+～～～～～～～～
