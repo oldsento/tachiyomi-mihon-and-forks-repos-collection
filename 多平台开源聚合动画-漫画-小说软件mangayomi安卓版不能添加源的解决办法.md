@@ -20,6 +20,6 @@ https://m2k3a.github.io/mangayomi-extensions/anime_index.json
 
 3，Dartotsu，安卓，https://github.com/aayush2622/Dartotsu
 
-4，Unyo，https://github.com/K3vinb5/Unyo，Dantotsu的桌面版，漫画/动画，支持或即将(来)支持aniyomi/mangayomi插件，可能现在已经兼容，具体自行测试，
+4，Unyo，https://github.com/K3vinb5/Unyo ，Dantotsu的桌面版，漫画/动画，支持或即将(来)支持aniyomi/mangayomi插件，可能现在已经兼容，具体自行测试，
 
 💡mangayomi插件测试了部分，感觉问题和aniyomi/tachiyomi相似，插件几乎一半都各种问题不能看
