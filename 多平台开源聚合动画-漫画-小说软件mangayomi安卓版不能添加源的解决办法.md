@@ -1,3 +1,5 @@
+Multi-platform comics / novel / animation aggregate software MANGAYOMI Cannot add a source solution：
+
 https://github.com/kodjodevf/mangayomi
 
 问题：复制官方仓库链接不能导入源https://github.com/kodjodevf/mangayomi-extensions
