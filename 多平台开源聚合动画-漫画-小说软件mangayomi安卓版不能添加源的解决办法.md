@@ -1,4 +1,4 @@
-Multi-platform comics / novel / animation aggregate software MANGAYOMI Cannot add a source solution：
+Multi-platform comics / novel / animation aggregate software MANGAYOMI Cannot add sources solution：
 
 https://github.com/kodjodevf/mangayomi
 
