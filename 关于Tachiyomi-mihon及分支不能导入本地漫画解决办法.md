@@ -1,3 +1,5 @@
+Tachiyomi and Mihon and branches cannot import local comic solutions：
+
 ## 关于Tachiyomi/mihon导入本地漫画文件参阅以下示例：
 ![官方](https://p.sda1.dev/26/38b1544c84b2600e96334b79aab9de48/IMG_20250814_151339.jpg)
 [你的存储位置] / local [系列标题] :
