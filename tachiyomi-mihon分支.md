@@ -1,5 +1,5 @@
 基于tachiyomi/mihon及分支和类似软件汇总：
-
+![img](https://p.sda1.dev/26/ae5ff9c45ba78de76a861a0fed8cfe2a/Screenshot_2025_0820_173133.png)[/img]
 1. https://github.com/aniyomiorg/aniyomi
 2. https://github.com/Jays2Kings/tachiyomiJ2K
 3. https://github.com/az4521/tachiyomiAZ
