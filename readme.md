@@ -1,3 +1,4 @@
+![img](https://hitscounter.dev/api/hit?url=https://github.com/oldsento/tachiyomi-mihon-and-forks-repos-collection&label=&icon=eye&color=%2380cbc4&message=&style=flat&tz=UTC)
 可能有不少错误欢迎指正，有其他本帖没提到的欢迎提交///列表中留空的表示不确定/没有仔细了解！
 
 | 序号 | 名称                          | 基于其他软件/分支         | 平台               | Mihon/Tachiyomi插件 | 本地/在线 | 类型               | 离线缓存/下载 |
