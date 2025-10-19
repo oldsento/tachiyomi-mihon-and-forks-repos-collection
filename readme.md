@@ -47,7 +47,7 @@
 |41|[IllusionElements/<br>Tachiyomi](https://github.com/IllusionElements/Tachiyomi)|基于TachiyomiSY|Android|✅|在线 | 漫画|✅ |
 |42|[ZhanZiyuan/tachiyomi](https://github.com/ZhanZiyuan/tachiyomi)|基于Mangafeed|Android|✅|在线 | 漫画|✅ |
 |43|[Shinyomi](https://github.com/achmadss/Shinyomi)|基于TachiyomiSY|Android|✅|在线 | 漫画|✅ |
-|44|[mannu691/TachiyomiSY](https://github.com/mannu691/TachiyomiSY)|基于TachiyomiSY|Android|✅|在线 | 漫画|✅ |
+|44|[mannu691/TachiyomiSY](https://github.com/mannu691/<br>TachiyomiSY)|基于TachiyomiSY|Android|✅|在线 | 漫画|✅ |
 |45|[]()| | | | | | |
 ||[]()| | | | | | |
 
