@@ -14,8 +14,8 @@
 | 8    | [Kuukiyomi](https://github.com/hastie101/kuukiyomi)                    | 基于Aniyomi        | Android                  | ✅                      | 在线      | 漫画               |                |
 | 9    | [TachiyomiEH](https://github.com/NerdNumber9/TachiyomiEH)                   | 基于Tachiyomi      | Android                  | ✅                      | 在线      | 漫画 Hentai/ExHentai版 |                |
 | 10   | [Suwayomi-Server<br>(原名Tachidesk)](https://github.com/Suwayomi/Suwayomi-Server) |       | 多平台（Windows, Linux, macOS等） | ✅                      | 服务器      | 漫画               |                |
-| 11   | [Suwayomi/Tachidesk-qtui](https://github.com/Suwayomi/Tachidesk-qtui)      | 基于Tachidesk      | 多平台（Android, Desktop） | ✅                      | 服务器      | 漫画               |                |
-| 12   | [Suwayomi/Suwayomi-JUI](https://github.com/Suwayomi/Suwayomi-JUI)        | 基于Suwayomi-Server | 多平台（Android, Desktop） | ✅                      | 服务器      | 漫画               |                |
+| 11   | [Suwayomi/<br>Tachidesk-qtui](https://github.com/Suwayomi/Tachidesk-qtui)      | 基于Tachidesk      | 多平台（Android, Desktop） | ✅                      | 服务器      | 漫画               |                |
+| 12   | [Suwayomi/<br>Suwayomi-JUI](https://github.com/Suwayomi/Suwayomi-JUI)        | 基于Suwayomi-Server | 多平台（Android, Desktop） | ✅                      | 服务器      | 漫画               |                |
 | 13   | [Animetail](https://github.com/Animetailapp/Animetail)                     | 基于Aniyomi        | Android                  | ✅                      | 在线      | 动画               | ✅             |
 | 14   | [Animiru](https://github.com/Quickdesh/Animiru)                       | 基于Aniyomi        | Android                  | ✅                      | 在线      | 动画               |      ✅          |
 | 15   | [Tachidesk-Sorayomi](https://github.com/tachimanga/Tachidesk-Sorayomi) | 基于Tachidesk      | 多平台（Android, Desktop） | ✅                      | 服务器      | 漫画               |                |
@@ -36,7 +36,7 @@
 | 30   | [Awery](https://github.com/MrBoomDeveloper/Awery) | 基于Dantotsu              | Android       | 支持Aniyomi插件     | 在线      | 动画       | ❌            |
 | 31   | [AnymeX](https://github.com/RyanYuuki/AnymeX)     | ❌ | 多平台     | ✅          | 在线      | 小说/漫画/动画 | ❌           |
 | 32   | [Himitsu](https://github.com/RepoDevil/Himitsu)   | 基于Dantotsu              | Android       | ✅ | 在线      | 漫画/动画/小说  |   ✅          |
-| 33   | [Nowaaru/Suwariyomi](https://github.com/Nowaaru/suwariyomi) | 基于Tachiyomi             | Desktop       |        | 服务器      | 只支持Mangadex |             |
+| 33   | [Nowaaru/<br>Suwariyomi](https://github.com/Nowaaru/suwariyomi) | 基于Tachiyomi             | Desktop       |        | 服务器      | 只支持Mangadex |             |
 | 34   | [TachiyomiS97](https://github.com/Saud-97/TachiyomiS97) | 基于TachiyomiJ2K          | Android       | ✅                | 在线      | 漫画       |  ✅           |
 | 35   | [Naiko](https://github.com/UnTamed-Fury/Naiko)    | 基于Aniyomi/Mihon/Yokai的UI |      |               |       |        |             |
 | 36   | [CloudStream](https://github.com/recloudstream/cloudstream) | ❌ | Android | 支持aniyomi插件(另外下载插件包 | 在线 | 动画/影视 | ✅ |
@@ -47,7 +47,7 @@
 |41|[IllusionElements/<br>Tachiyomi](https://github.com/IllusionElements/Tachiyomi)|基于TachiyomiSY|Android|✅|在线 | 漫画|✅ |
 |42|[ZhanZiyuan/tachiyomi](https://github.com/ZhanZiyuan/tachiyomi)|基于Mangafeed|Android|✅|在线 | 漫画|✅ |
 |43|[Shinyomi](https://github.com/achmadss/Shinyomi)|基于TachiyomiSY|Android|✅|在线 | 漫画|✅ |
-|44|[mannu691/TachiyomiSY](https://github.com/mannu691/<br>TachiyomiSY)|基于TachiyomiSY|Android|✅|在线 | 漫画|✅ |
+|44|[mannu691/<br>TachiyomiSY](https://github.com/mannu691/TachiyomiSY)|基于TachiyomiSY|Android|✅|在线 | 漫画|✅ |
 |45|[]()| | | | | | |
 ||[]()| | | | | | |
 
