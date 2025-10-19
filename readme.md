@@ -13,7 +13,7 @@
 | 7    | [Miyomi](https://github.com/tas33n/Miyomi)                        | ❌                        |                          | ❌                      | 网页导航      |                    |                |
 | 8    | [Kuukiyomi](https://github.com/hastie101/kuukiyomi)                    | 基于Aniyomi        | Android                  | ✅                      | 在线      | 漫画               |                |
 | 9    | [TachiyomiEH](https://github.com/NerdNumber9/TachiyomiEH)                   | 基于Tachiyomi      | Android                  | ✅                      | 在线      | 漫画 Hentai/ExHentai版 |                |
-| 10   | [Suwayomi-Server(原名Tachidesk)](https://github.com/Suwayomi/Suwayomi-Server) |       | 多平台（Windows, Linux, macOS等） | ✅                      | 服务器      | 漫画               |                |
+| 10   | [Suwayomi-Server<br>(原名Tachidesk)](https://github.com/Suwayomi/Suwayomi-Server) |       | 多平台（Windows, Linux, macOS等） | ✅                      | 服务器      | 漫画               |                |
 | 11   | [Suwayomi/Tachidesk-qtui](https://github.com/Suwayomi/Tachidesk-qtui)      | 基于Tachidesk      | 多平台（Android, Desktop） | ✅                      | 服务器      | 漫画               |                |
 | 12   | [Suwayomi/Suwayomi-JUI](https://github.com/Suwayomi/Suwayomi-JUI)        | 基于Suwayomi-Server | 多平台（Android, Desktop） | ✅                      | 服务器      | 漫画               |                |
 | 13   | [Animetail](https://github.com/Animetailapp/Animetail)                     | 基于Aniyomi        | Android                  | ✅                      | 在线      | 动画               | ✅             |
