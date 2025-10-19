@@ -41,6 +41,15 @@
 | 35   | [Naiko](https://github.com/UnTamed-Fury/Naiko)    | 基于Aniyomi/Mihon/Yokai的UI |      |               |       |        |             |
 | 36   | [CloudStream](https://github.com/recloudstream/cloudstream) | ❌ | Android | 支持aniyomi插件(另外下载插件包 | 在线 | 动画/影视 | ✅ |
 | 37   | [Dartotsu](https://github.com/aayush2622/Dartotsu) | 基于Dantotsu(名字很像 | 多平台 | ❌支持mangayomi插件 | 在线 | 动画/漫画/小说 | ❌ |
+|38|[Suwayomi-WebUI](https://github.com/Suwayomi/Suwayomi-WebUI)|基于Suwayomi-Server|桌面端|✅|服务器 |漫画| |
+|39|[Tachidesk-Sorayomi](https://github.com/Suwayomi/Tachidesk-Sorayomi)| |多平台|✅ | 服务器|漫画 | |
+|40|[TachiyomiSYPreview](https://github.com/jobobby04/TachiyomiSYPreview)|基于TachiyomiSY|Android|✅|在线|漫画|✅|
+|41|[IllusionElements/Tachiyomi](https://github.com/IllusionElements/Tachiyomi)|基于TachiyomiSY|Android|✅|在线 | 漫画|✅ |
+|42|[ZhanZiyuan/tachiyomi](https://github.com/ZhanZiyuan/tachiyomi)|基于Mangafeed|Android|✅|在线 | 漫画|✅ |
+|43|[Shinyomi](https://github.com/achmadss/Shinyomi)|基于TachiyomiSY|Android|✅|在线 | 漫画|✅ |
+|44|[mannu691/TachiyomiSY](https://github.com/mannu691/TachiyomiSY)|基于TachiyomiSY|Android|✅|在线 | 漫画|✅ |
+|45|[]()| | | | | | |
+||[]()| | | | | | |
 
 ————————————
 
