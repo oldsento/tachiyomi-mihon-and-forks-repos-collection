@@ -20,4 +20,4 @@
 | |快速文件管理器1.0|❌| ❌| ❌|
 | | | | | |
 
-⭕表示部分支持，本文的tachiyomiSY是分支mannu691-tachiyomiSY，rar5不支持❗aniyomi加载可能会闪退/后退❗mihon容易闪退❗文件管理2.5.8/CDP/tachiyomi系列进入不了第二级文件夹❗File Manager4.4.0FTP服务❌设置帐密没用❗分类文件管理1.0.43编码设置utf-8才显示内容❗
+⭕表示部分支持，本文的tachiyomiSY是分支mannu691-tachiyomiSY，rar5不支持❗aniyomi加载可能会闪退/后退❗mihon容易闪退❗文件管理2.5.8/CDP/tachiyomi系列进入不了第二级文件夹❗File Manager4.4.0FTP服务❌设置帐密没用❗分类文件管理1.0.43编码设置utf-8才显示内容❗.
