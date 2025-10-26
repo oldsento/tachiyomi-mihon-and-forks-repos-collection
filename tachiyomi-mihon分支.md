@@ -22,7 +22,7 @@
 3. https://github.com/Quickdesh/Animiru
 4. https://github.com/komikku-app/anikku
 
-基于Dantotsu:
+基于Dantotsu(https://github.com/itsmechinmoy/dantotsu-updater https://github.com/Dantotsu-Bot/Dantotsu-Builder:
 1. https://github.com/K3vinb5/Unyo
 2. https://github.com/MrBoomDeveloper/Awery
 3. https://github.com/RepoDevil/Himitsu
