@@ -31,7 +31,7 @@ https://bgm.tv/group/topic/430764
 | 19   | [Animeko](https://github.com/open-ani/animeko)                         | ❌                        | Android, iOS, Windows, macOS, Linux | ❌，内置插件           | 在线      | 动画               |   ✅             |
 | 20   | [Anikku](https://github.com/komikku-app/anikku)                        | 基于Aniyomi        | Android                  | ❌                      | 在线      | 动画               |     ✅           |
 | 21   | [Yōkai](https://github.com/null2264/yokai)                             | 基于Tachiyomi/Mihon | Android                  | ✅                      | 在线      | 漫画               |  ✅              |
-| 22   | [Dantotsu](https://github.com/albertxiao/Dantotsu)                     | 基于Saikou         | Android                  | ✅   同时支持mangayomi插件                   | 在线      | 漫画/动画/小说          |                |
+| 22   | [Dantotsu](https://github.com/albertxiao/Dantotsu)                     | 基于Saikou         | Android                  | ✅   同时支持mangayomi插件?                   | 在线      | 漫画/动画/小说          |        ✅        |
 | 23   | [Unyo](https://github.com/K3vinb5/Unyo)                                 | 基于Dantotsu       | Windows, macOS, Linux    | 支持或即将(来)支持aniyomi/mangayomi插件                     | 在线      | 漫画/动画          |                |
 | 24   | [Houdoku](https://github.com/xgi/houdoku)                               | ❌                        | Windows, macOS, Linux    | ❌，内置插件           | 在线      | 漫画               |  ✅              |
 | 25   | [Aidoku](https://github.com/Aidoku/Aidoku)                             | ❌                        | iOS, iPadOS              | ❌                      | 在线      | 漫画               |   ✅            |
