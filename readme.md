@@ -9,6 +9,7 @@ https://bgm.tv/group/topic/430764
 可能有不少错误欢迎指正，有其他本帖没提到的欢迎提交///列表中留空的表示不确定/没有仔细了解！
 
 |序号|名称|基于其他软件/分支|平台|Mihon/Tachiyomi插件 | 本地/在线|类型|离线缓存/下载|
+
 |---|---|---|---|---|---|---|
 |1|[Aidoku](https://github.com/Aidoku/Aidoku) | ❌| iOS, iPadOS  | ❌ | 在线| 漫画|✅|
 |2|[Anikku](https://github.com/komikku-app/anikku)| 基于Aniyomi | Android| ❌ | 在线| 动画|  ✅  |
