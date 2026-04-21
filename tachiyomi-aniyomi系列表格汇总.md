@@ -34,7 +34,7 @@
 |32|[TachiyomiEH](https://github.com/NerdNumber9/TachiyomiEH) | 基于Tachiyomi| Android| ✅ | | 漫画 Hentai/ExHentai版 | |
 |33|[TachiyomiJ2K](https://github.com/Jays2Kings/tachiyomiJ2K)  | 基于Tachiyomi| Android| ✅ | | 漫画| ✅ |
 |34|[TachiyomiS97](https://github.com/Saud-97/TachiyomiS97)| 基于TachiyomiJ2K | Android | ✅ | | 漫画 |  ✅  |
-|35|[TachiyomiSYPreview](https://github.com/jobobby04/TachiyomiSYPreview)|基于TachiyomiSY|Android|✅| |漫画|✅|
+|35|[Yomiko](https://github.com/petalya/Yomiko)|基于TachiyomiSY|Android|✅| |漫画/小说|✅|
 |36|[TachiyomiSY](https://github.com/jobobby04/TachiyomiSY) | 基于TachiyomiAZ | Android| ✅ | | 漫画| ✅ |
 |37|[Tadami](https://github.com/andarcanum/Tadami-Aniyomi-fork) | 基于Aniyomi | Android | ✅ |  |漫画/动画/小说 |✅|
 |38|[Taison](https://github.com/Gent8/Taison) |基于mihon| Android | ✅ |  | 漫画 | |
