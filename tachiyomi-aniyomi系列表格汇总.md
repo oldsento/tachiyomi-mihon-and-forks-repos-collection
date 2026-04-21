@@ -38,7 +38,7 @@
 |36|[TachiyomiSY](https://github.com/jobobby04/TachiyomiSY) | 基于TachiyomiAZ | Android| ✅ | | 漫画| ✅ |
 |37|[Tadami](https://github.com/andarcanum/Tadami-Aniyomi-fork) | 基于Aniyomi | Android | ✅ |  |漫画/动画/小说 |✅|
 |38|[Taison](https://github.com/Gent8/Taison) |基于mihon| Android | ✅ |  | 漫画 | |
-|39|[mannu691/<br>TachiyomiSY](https://github.com/mannu691/TachiyomiSY)|基于TachiyomiSY|Android|✅| | 漫画|✅ |
+|39|[TachiyomiAT](https://github.com/mannu691/TachiyomiSY)|基于Tachiyomi/Mihon|Android|✅| | 漫画|✅ |
 |40|[ZhanZiyuan/<br>tachiyomi](https://github.com/ZhanZiyuan/tachiyomi)|基于Mangafeed|Android|✅| | 漫画|✅ |
 |41|[Unyo](https://github.com/K3vinb5/Unyo)| 基于Dantotsu| Windows, macOS, Linux | 支持或即将(来)支持aniyomi/mangayomi插件| | 漫画/动画 | |
 |42|[Xkana-shii<br>/komikku](https://github.com/xkana-shii/komikku) | 基于Komikku | Android | ✅ |  | 漫画 | |
