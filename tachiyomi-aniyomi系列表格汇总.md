@@ -44,3 +44,8 @@
 |42|[Xkana-shii<br>/komikku](https://github.com/xkana-shii/komikku) | 基于Komikku | Android | ✅ |  | 漫画 | |
 |43|[Yomihon](https://github.com/yomihon/yomihon) |  基于Mihon|  Android| ✅ |  | 漫画| ✅|
 |44|[Yōkai](https://github.com/null2264/yokai) | 基于Tachiyomi/Mihon | Android| ✅ | | 漫画|  ✅  |
+|45|[AniZen](https://github.com/salmanbappi/AniZen)|Aniyomi/Anikku|Android|✅| |动画| |
+|46|[Fabsemanga](https://codeberg.org/fabseman/fabsemanga)|tachiyomiSY|Android|✅| |漫画| |
+|47|[Hikari](https://github.com/LeverTeam/hikari)|Mihon|Android|✅| |漫画| |
+|48|[MihonDS](https://github.com/mis0suppe/mihon-ds)|Mihon|Android|✅| |漫画| |
+|49|[Tsukimi](https://github.com/salmanbappi/Tsukimi)|kotatsu|Android|✅kotatsu/tachiyomi插件(≥v3.0.109| |漫画| |
