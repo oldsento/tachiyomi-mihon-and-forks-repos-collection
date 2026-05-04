@@ -1,4 +1,4 @@
-|序号|名称|基于其他软件/分支|平台|Mihon/Tachiyomi插件 | 本地/在线|类型|离线缓存/下载|
+|序号|名称|基于其他软件/分支|平台|aniyomi/Tachiyomi插件 | 本地/在线|类型|离线缓存/下载|
 |---|---|---|---|---|---|---|---|
 |1|[Aniyomi](https://github.com/aniyomiorg/aniyomi)  | 基于Tachiyomi| Android| ✅ | | 漫画/动画 | ✅ |
 |2|[Animetail](https://github.com/Animetailapp/Animetail)| 基于Aniyomi | Android| ✅ | | 动画| ✅ |
