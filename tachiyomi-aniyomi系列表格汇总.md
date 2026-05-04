@@ -3,7 +3,7 @@
 |1|[Aniyomi](https://github.com/aniyomiorg/aniyomi)  | 基于Tachiyomi| Android| ✅ | | 漫画/动画 | ✅ |
 |2|[Animetail](https://github.com/Animetailapp/Animetail)| 基于Aniyomi | Android| ✅ | | 动画| ✅ |
 |3|[Animiru](https://github.com/Quickdesh/Animiru) | 基于Aniyomi  | Android| ✅ | | 动画|✅ |
-|4|[Anikku](https://github.com/komikku-app/anikku)| 基于Aniyomi | Android| ❌ | | 动画|  ✅  |
+|4|[Anikku](https://github.com/komikku-app/anikku)| 基于Aniyomi | Android| ✅aniyomi插件 | | 动画|  ✅  |
 |5|[AnymeX](https://github.com/RyanYuuki/AnymeX) | ❌ | Windows, Linux, Mac, Android,iOS  | ✅同时支持mangayomi插件 | | 小说/漫画/动画 | ❌  |
 |6|[Awery](https://github.com/MrBoomDeveloper/Awery)| 基于Dantotsu  | Android | 支持Aniyomi插件  | | 动画 | ❌|
 |7|[CloudStream](https://github.com/recloudstream/cloudstream)| ❌ | Android | 支持aniyomi插件(另外下载插件包 |  | 动画/影视 | ✅ |
