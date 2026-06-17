@@ -79,29 +79,63 @@ const filteredTree = computed(() => {
   return tree.value.map(filterNode).filter(Boolean) as RawGroup[]
 })
 
-// 展开状态（key -> boolean）
+// 展开状态（key -> boolean），以及匹配状态（用于高亮）
 const expanded = ref<Record<string, boolean>>({})
 
 function handleToggle(path: string) {
   expanded.value[path] = !expanded.value[path]
-}
-
-// 在搜索时，自动展开所有父节点（简单策略），你可以改为只展开匹配分支
-watchEffect(() => {
-  if (!query.value) return
-  // 将所有父路径设置为 true（快速实现）
-  expanded.value = {}
-  // dispatch event to notify TreeNode instances to update (they read expanded via window.__TREE_EXPANDED)
   if (typeof window !== 'undefined') {
-    (window as any).__TREE_EXPANDED = expanded.value
+    ;(window as any).__TREE_EXPANDED = (window as any).__TREE_EXPANDED || {}
+    ;(window as any).__TREE_EXPANDED[path] = expanded.value[path]
     window.dispatchEvent(new CustomEvent('tree-state-changed'))
   }
+}
+
+// 计算匹配路径与需要展开的父节点 —— 仅展开包含匹配项的分支
+function computeMatchesAndExpanded() {
+  const q = query.value.trim()
+  ;(window as any).__TREE_MATCHES = {}
+  ;(window as any).__TREE_EXPANDED = {}
+
+  if (!q) {
+    // no query: preserve nothing (user can manually expand)
+    window.dispatchEvent(new CustomEvent('tree-state-changed'))
+    return
+  }
+
+  function traverse(nodes: RawGroup[], prefix = ''): boolean {
+    let subtreeHasMatch = false
+    for (let i = 0; i < nodes.length; i++) {
+      const n = nodes[i]
+      const path = prefix ? `${prefix}/${i}` : `${i}`
+      const selfMatch = nodeMatches(n, q)
+      let childHas = false
+      if (n.items && n.items.length) {
+        childHas = traverse(n.items, path)
+      }
+      if (selfMatch) {
+        ;(window as any).__TREE_MATCHES[path] = true
+      }
+      if (childHas || selfMatch) {
+        ;(window as any).__TREE_EXPANDED[path] = true
+        subtreeHasMatch = true
+      }
+    }
+    return subtreeHasMatch
+  }
+
+  traverse(filteredTree.value)
+  window.dispatchEvent(new CustomEvent('tree-state-changed'))
+}
+
+watchEffect(() => {
+  computeMatchesAndExpanded()
 })
 
 onMounted(() => {
-  // 初始化全局展开状态存放点（兼容不同组件实例）
   if (typeof window !== 'undefined') {
-    (window as any).__TREE_EXPANDED = (window as any).__TREE_EXPANDED || {}
+    ;(window as any).__TREE_EXPANDED = (window as any).__TREE_EXPANDED || {}
+    ;(window as any).__TREE_MATCHES = (window as any).__TREE_MATCHES || {}
     window.addEventListener('tree-toggle', (e: any) => {
       const p = e?.detail?.path
       if (!p) return
@@ -114,7 +148,7 @@ onMounted(() => {
 
 <script lang="ts">
 // 递归 TreeNode 组件（用 render-less 方式避免复杂依赖）
-import { defineComponent, h, onMounted, ref, watch } from 'vue'
+import { defineComponent, h, onMounted, ref } from 'vue'
 
 export default defineComponent({
   name: 'TreeSidebar',
@@ -131,10 +165,13 @@ const TreeNode = defineComponent({
   emits: ['toggle'],
   setup(props, { emit }) {
     const expandedLocal = ref(false)
+    const matchedLocal = ref(false)
 
     function updateFromGlobal() {
       const g = (typeof window !== 'undefined' && (window as any).__TREE_EXPANDED) || {}
+      const m = (typeof window !== 'undefined' && (window as any).__TREE_MATCHES) || {}
       expandedLocal.value = !!g[props.path]
+      matchedLocal.value = !!m[props.path]
     }
 
     function onToggle() {
@@ -149,19 +186,30 @@ const TreeNode = defineComponent({
       updateFromGlobal()
       window.addEventListener('tree-state-changed', updateFromGlobal)
     })
-    watch(() => props.path, updateFromGlobal)
 
     return () => {
       const n = props.node as RawGroup
       const children = Array.isArray(n.items) && n.items.length ? n.items : null
-      const title = h('div', { class: 'tree-node-title' }, [
-        children ? h('button', {
+
+      const titleChildren: any[] = []
+      if (children) {
+        titleChildren.push(h('button', {
           class: 'tree-toggle',
           onClick: (e: Event) => { e.preventDefault(); onToggle() },
           'aria-label': '展开/折叠'
-        }, [ h('span', { class: ['chev', expandedLocal.value ? 'open' : ''] }, expandedLocal.value ? '▾' : '▸') ]) : null,
-        n.link ? h('a', { class: 'tree-link', href: n.link }, n.text) : h('span', { class: 'tree-text' }, n.text)
-      ])
+        }, [ h('span', { class: ['chev', expandedLocal.value ? 'open' : ''] }, expandedLocal.value ? '▾' : '▸') ]))
+      }
+
+      const textClass = children ? 'tree-link' : 'tree-text'
+      const cls = matchedLocal.value ? `${textClass} match` : textClass
+
+      if (n.link) {
+        titleChildren.push(h('a', { class: cls, href: n.link }, n.text))
+      } else {
+        titleChildren.push(h('span', { class: cls }, n.text))
+      }
+
+      const title = h('div', { class: 'tree-node-title' }, titleChildren)
 
       const childNodes = children ? h('ul', { class: 'tree-children', style: { display: expandedLocal.value ? 'block' : 'none' } },
         children.map((c: RawGroup, i: number) =>
@@ -190,4 +238,7 @@ if (typeof (module) !== 'undefined') {
 .tree-link:hover { color: var(--vp-c-brand-light); }
 .tree-text { color: var(--vp-c-text-2); }
 .chev { font-size: 0.85rem; display:inline-block; width: 1.2rem; text-align:center; }
+
+/* 匹配高亮样式 */
+.match { background-color: rgba(59, 130, 246, 0.08); color: var(--vp-c-brand-light); padding: 0 4px; border-radius: 4px; }
 </style>
