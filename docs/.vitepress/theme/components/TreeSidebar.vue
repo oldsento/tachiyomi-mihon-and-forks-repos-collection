@@ -1,6 +1,6 @@
 <template>
   <nav class="tree-sidebar" aria-label="文档树状目录">
-    <ul class="tree-root">
+    <ul class="tree-root" ref="root">
       <TreeNode
         v-for="(node, idx) in filteredTree"
         :key="idx"
@@ -25,6 +25,7 @@ const props = defineProps<{ sidebar: Record<string, RawGroup[]> | undefined }>()
 
 // 接收来自顶部搜索栏的查询
 const query = ref('')
+const root = ref<HTMLElement | null>(null)
 
 if (typeof window !== 'undefined') {
   window.addEventListener('top-search-input', (e: any) => {
@@ -51,6 +52,10 @@ function buildTree(sidebar: Record<string, RawGroup[]> | undefined) {
 }
 
 const tree = computed(() => buildTree(props.sidebar))
+
+function escapeRegExp(s: string) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
 
 function nodeMatches(node: RawGroup, q: string): boolean {
   if (!q) return true
@@ -82,12 +87,32 @@ const filteredTree = computed(() => {
 // 展开状态（key -> boolean），以及匹配状态（用于高亮）
 const expanded = ref<Record<string, boolean>>({})
 
+const STORAGE_KEY = 'vitepress_tree_expanded_v1'
+
+function loadExpandedFromStorage() {
+  try {
+    if (typeof window === 'undefined') return {}
+    const raw = localStorage.getItem(STORAGE_KEY)
+    return raw ? JSON.parse(raw) : {}
+  } catch {
+    return {}
+  }
+}
+
+function saveExpandedToStorage() {
+  try {
+    if (typeof window === 'undefined') return
+    localStorage.setItem(STORAGE_KEY, JSON.stringify((window as any).__TREE_EXPANDED || {}))
+  } catch {}
+}
+
 function handleToggle(path: string) {
   expanded.value[path] = !expanded.value[path]
   if (typeof window !== 'undefined') {
     ;(window as any).__TREE_EXPANDED = (window as any).__TREE_EXPANDED || {}
     ;(window as any).__TREE_EXPANDED[path] = expanded.value[path]
     window.dispatchEvent(new CustomEvent('tree-state-changed'))
+    saveExpandedToStorage()
   }
 }
 
@@ -95,10 +120,10 @@ function handleToggle(path: string) {
 function computeMatchesAndExpanded() {
   const q = query.value.trim()
   ;(window as any).__TREE_MATCHES = {}
-  ;(window as any).__TREE_EXPANDED = {}
+  ;(window as any).__TREE_EXPANDED = { ...loadExpandedFromStorage() }
 
   if (!q) {
-    // no query: preserve nothing (user can manually expand)
+    // no query: restore from storage and notify
     window.dispatchEvent(new CustomEvent('tree-state-changed'))
     return
   }
@@ -126,6 +151,7 @@ function computeMatchesAndExpanded() {
 
   traverse(filteredTree.value)
   window.dispatchEvent(new CustomEvent('tree-state-changed'))
+  saveExpandedToStorage()
 }
 
 watchEffect(() => {
@@ -134,14 +160,42 @@ watchEffect(() => {
 
 onMounted(() => {
   if (typeof window !== 'undefined') {
-    ;(window as any).__TREE_EXPANDED = (window as any).__TREE_EXPANDED || {}
+    ;(window as any).__TREE_EXPANDED = { ...loadExpandedFromStorage() }
     ;(window as any).__TREE_MATCHES = (window as any).__TREE_MATCHES || {}
     window.addEventListener('tree-toggle', (e: any) => {
       const p = e?.detail?.path
       if (!p) return
       ;(window as any).__TREE_EXPANDED[p] = !( (window as any).__TREE_EXPANDED[p] )
       window.dispatchEvent(new CustomEvent('tree-state-changed'))
+      saveExpandedToStorage()
     })
+
+    // keyboard navigation
+    const nav = root.value
+    if (nav) {
+      nav.addEventListener('keydown', (e: KeyboardEvent) => {
+        const focusables = Array.from(nav.querySelectorAll<HTMLElement>('.tree-focusable'))
+        if (!focusables.length) return
+        const idx = focusables.indexOf(document.activeElement as HTMLElement)
+        if (e.key === 'ArrowDown') {
+          e.preventDefault()
+          const next = focusables[(idx + 1 + focusables.length) % focusables.length]
+          next.focus()
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault()
+          const prev = focusables[(idx - 1 + focusables.length) % focusables.length]
+          prev.focus()
+        } else if (e.key === 'Enter') {
+          const el = document.activeElement as HTMLElement
+          if (el && el.dataset && el.dataset.href) {
+            window.location.href = el.dataset.href
+          } else {
+            // if it's a button (toggle) activate
+            (document.activeElement as HTMLElement).click()
+          }
+        }
+      })
+    }
   }
 })
 </script>
@@ -187,6 +241,21 @@ const TreeNode = defineComponent({
       window.addEventListener('tree-state-changed', updateFromGlobal)
     })
 
+    function renderTextWithHighlight(text: string) {
+      const q = (typeof window !== 'undefined' ? (window as any).__TOP_SEARCH_QUERY : '') || ''
+      const query = q.toString().trim()
+      if (!query) return text
+      try {
+        const pattern = new RegExp(`(${escapeRegExp(query)})`, 'ig')
+        const parts = text.split(pattern)
+        return parts.map((part: string, i: number) =>
+          pattern.test(part) ? h('span', { class: 'match-sub' }, part) : h('span', {}, part)
+        )
+      } catch {
+        return text
+      }
+    }
+
     return () => {
       const n = props.node as RawGroup
       const children = Array.isArray(n.items) && n.items.length ? n.items : null
@@ -196,17 +265,22 @@ const TreeNode = defineComponent({
         titleChildren.push(h('button', {
           class: 'tree-toggle',
           onClick: (e: Event) => { e.preventDefault(); onToggle() },
-          'aria-label': '展开/折叠'
+          'aria-label': '展开/折叠',
+          tabindex: 0,
+          'data-path': props.path,
+          'aria-expanded': expandedLocal.value
         }, [ h('span', { class: ['chev', expandedLocal.value ? 'open' : ''] }, expandedLocal.value ? '▾' : '▸') ]))
       }
 
       const textClass = children ? 'tree-link' : 'tree-text'
       const cls = matchedLocal.value ? `${textClass} match` : textClass
 
+      // make the label focusable for keyboard navigation
       if (n.link) {
-        titleChildren.push(h('a', { class: cls, href: n.link }, n.text))
+        const href = n.link
+        titleChildren.push(h('a', { class: cls + ' tree-focusable', href: href, tabindex: 0, 'data-href': href }, renderTextWithHighlight(n.text || '')))
       } else {
-        titleChildren.push(h('span', { class: cls }, n.text))
+        titleChildren.push(h('span', { class: cls + ' tree-focusable', tabindex: 0, 'data-path': props.path }, renderTextWithHighlight(n.text || '')))
       }
 
       const title = h('div', { class: 'tree-node-title' }, titleChildren)
@@ -226,6 +300,10 @@ const TreeNode = defineComponent({
 if (typeof (module) !== 'undefined') {
   ;(module as any).exports = { default: ({} as any), TreeNode }
 }
+
+function escapeRegExp(s: string) {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
 </script>
 
 <style scoped>
@@ -241,4 +319,6 @@ if (typeof (module) !== 'undefined') {
 
 /* 匹配高亮样式 */
 .match { background-color: rgba(59, 130, 246, 0.08); color: var(--vp-c-brand-light); padding: 0 4px; border-radius: 4px; }
+.match-sub { background-color: rgba(59, 130, 246, 0.12); color: var(--vp-c-brand-light); padding: 0 2px; border-radius: 3px; }
+.tree-focusable:focus { outline: 2px solid rgba(99,102,241,0.2); outline-offset: 2px; }
 </style>
